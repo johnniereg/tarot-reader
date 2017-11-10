@@ -4,7 +4,7 @@
 //
 // On execution, returns a single tarot card for your daily reading.
 //
-// Random selection of one of 72 cards
+// Random selection of one of 78 cards
 //
 // Features to add:
 //
@@ -14,6 +14,7 @@
 //
 
 const theDeck = {
+  // Major Arcana
   0: 'The Fool',
   1: 'The Magician',
   2: 'The High Priestess',
@@ -35,7 +36,67 @@ const theDeck = {
   18: 'The Moon',
   19: 'The Sun',
   20: 'Judgement',
-  21: 'The World'
+  21: 'The World',
+  // Wands
+  22: 'Ace of Wands',
+  23: 'Two of Wands',
+  24: 'Three of Wands',
+  25: 'Four of Wands',
+  26: 'Five of Wands',
+  27: 'Six of Wands',
+  28: 'Seven of Wands',
+  29: 'Eight of Wands',
+  30: 'Nine of Wands',
+  31: 'Ten of Wands',
+  32: 'Page of Wands',
+  33: 'Knight of Wands',
+  34: 'Queen of Wands',
+  35: 'King of Wands',
+  // Pentacles
+  36: 'Ace of Pentalces',
+  37: 'Two of Pentalces',
+  38: 'Three of Pentalces',
+  39: 'Four of Pentalces',
+  40: 'Five of Pentalces',
+  41: 'Six of Pentalces',
+  42: 'Seven of Pentalces',
+  43: 'Eight of Pentalces',
+  44: 'Nine of Pentalces',
+  45: 'Ten of Pentalces',
+  46: 'Page of Pentalces',
+  47: 'Knight of Pentalces',
+  48: 'Queen of Pentalces',
+  49: 'King of Pentalces',
+  // Cups
+  50: 'Ace of Cups',
+  51: 'Two of Cups',
+  52: 'Three of Cups',
+  53: 'Four of Cups',
+  54: 'Five of Cups',
+  55: 'Six of Cups',
+  56: 'Seven of Cups',
+  57: 'Eight of Cups',
+  58: 'Nine of Cups',
+  59: 'Ten of Cups',
+  60: 'Page of Cups',
+  61: 'Knight of Cups',
+  62: 'Queen of Cups',
+  63: 'King of Cups',
+  // Swords
+  64: 'Ace of Swords',
+  65: 'Two of Swords',
+  66: 'Three of Swords',
+  67: 'Four of Swords',
+  68: 'Five of Swords',
+  69: 'Six of Swords',
+  70: 'Seven of Swords',
+  71: 'Eight of Swords',
+  72: 'Nine of Swords',
+  73: 'Ten of Swords',
+  74: 'Page of Swords',
+  75: 'Knight of Swords',
+  76: 'Queen of Swords',
+  77: 'King of Swords'
 };
 
 
@@ -46,8 +107,8 @@ function getRandomInt(min, max) {
 }
 
 function pullTarotCard() {
-  let card = getRandomInt(0, 21);
-  console.log("Your card is: ", theDeck[card]);
+  let card = getRandomInt(0, 72);
+  console.log("Your card is:", theDeck[card]);
 }
 
 pullTarotCard();
