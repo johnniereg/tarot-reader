@@ -9,8 +9,8 @@
 // Features to add:
 //
 // Info on the cards.
-// Ask a question.
-// More complicated cards.
+// Card upright or in reverse.
+//
 //
 
 const theDeck = {
@@ -99,16 +99,24 @@ const theDeck = {
   77: 'King of Swords'
 };
 
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+function pullTarotCard(question) {
+  if (question === undefined) {
+    console.log("Ask a question. Any question. Like this... <node tarot.js \"What should I do?\">");
+  } else {
+    let card = Math.floor(Math.random() * (71 - 0)) + 0;
+    console.log("You asked:", question);
+    setTimeout(function() {
+      console.log("Shuffling the deck...");
+    }, 1000);
+    setTimeout(function() {
+      console.log("Pulling a card...");
+    }, 2000);
+    setTimeout(function() {
+      console.log("Your card is:", theDeck[card]); }, 3500);
+    }
 }
 
-function pullTarotCard() {
-  let card = getRandomInt(0, 72);
-  console.log("Your card is:", theDeck[card]);
-}
+let theQuestion = process.argv[2];
 
-pullTarotCard();
+pullTarotCard(theQuestion);
+
