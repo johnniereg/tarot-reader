@@ -6,20 +6,15 @@
 //
 // Random selection of one of 72 cards
 //
-//
 // Features to add:
 //
 // Info on the cards.
-//
 // Ask a question.
-//
 // More complicated cards.
 //
-//
-//
-//
-//
-//
+
+
+
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
